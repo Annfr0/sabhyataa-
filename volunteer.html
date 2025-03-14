@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Application Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div id="covid-19-awareness">
+            <a id="donate-now-link" href="donate.html">DONATE NOW</a>
+        </div>
+
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.png" alt="Sabhyataa Foundation logo">
+                    SABHYATTA FOUNDATION
+                </a>
+            </div>
+            <ul>
+                <li><a href="about-us.html">ABOUT US</a></li>
+                <li><a href="our-work.html">OUR WORK</a></li>
+                <li><a href="achievements.html">ACHIEVEMENTS</a></li>
+                <li><a href="volunteer.html">VOLUNTEER WITH US</a></li>
+                <!-- <li><a href="sign-in.html">SIGN IN | SIGN UP</a></li> -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h1>Volunteer Application Form</h1>
+            <form id="volunteer-form" action="submit_form.php" method="POST">  <!-- IMPORTANT:  Set up your server-side processing -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="surname">Surname:</label>
+                        <input type="text" id="surname" name="surname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstname">First Name:</label>
+                        <input type="text" id="firstname" name="firstname" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="telephone">Telephone:</label>
+                        <input type="tel" id="telephone" name="telephone">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender">
+                            <option value="">Select</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="16">  <!-- Adjust minimum age as needed -->
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="area_of_interest">Please tell us the area you wish to volunteer or specialize in?</label>
+                    <textarea id="area_of_interest" name="area_of_interest" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="why_volunteer">Please tell us why do you want to volunteer with our organization?</label>
+                    <textarea id="why_volunteer" name="why_volunteer" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="gain_experience">Please tell us what you hope to gain from your experience with us?</label>
+                    <textarea id="gain_experience" name="gain_experience" rows="4" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="relevant_experience">Please tell us about any educational background, work or volunteering experience that would be relevant to the volunteer role you are applying for.</label>
+                    <textarea id="relevant_experience" name="relevant_experience" rows="5"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="previous_volunteer_details">If you have volunteered before, please give details of where you have volunteered, for how long and describe your volunteer role.</label>
+                    <textarea id="previous_volunteer_details" name="previous_volunteer_details" rows="5"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="hobbies_skills">What hobbies, skills, special interests or qualities do you have that may be relevant to the volunteer role you are applying for?</label>
+                    <textarea id="hobbies_skills" name="hobbies_skills" rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="availability">When are you available to volunteer? (Please specify days, times and the length of commitment you would like to make)</label>
+                    <textarea id="availability" name="availability" rows="4" required></textarea>
+                </div>
+
+                <h2>References: Please supply us with the names of two referees (non-relatives)</h2>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ref1_name">Name:</label>
+                        <input type="text" id="ref1_name" name="ref1_name">
+                    </div>
+                    <div class="form-group">
+                        <label for="ref2_name">Name:</label>
+                        <input type="text" id="ref2_name" name="ref2_name">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ref1_address">Address:</label>
+                        <textarea id="ref1_address" name="ref1_address" rows="2"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="ref2_address">Address:</label>
+                        <textarea id="ref2_address" name="ref2_address" rows="2"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ref1_email">Email:</label>
+                        <input type="email" id="ref1_email" name="ref1_email">
+                    </div>
+                    <div class="form-group">
+                        <label for="ref2_email">Email:</label>
+                        <input type="email" id="ref2_email" name="ref2_email">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="ref1_telephone">Telephone:</label>
+                        <input type="tel" id="ref1_telephone" name="ref1_telephone">
+                    </div>
+                    <div class="form-group">
+                        <label for="ref2_telephone">Telephone:</label>
+                        <input type="tel" id="ref2_telephone" name="ref2_telephone">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="special_needs">Do you have any special needs you would like to share with us?</label>
+                    <textarea id="special_needs" name="special_needs" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Any other comments:</label>
+                    <textarea id="comments" name="comments" rows="3"></textarea>
+                </div>
+
+                <button type="submit">Submit Application</button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-icons">
+                <a href="https://twitter.com/" target="_blank" aria-label="Link to the Twitter home page"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/" target="_blank" aria-label="Link to the Facebook home page"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/sabhyataa_foundation_trust" target="_blank" aria-label="Link to the Instagram home page"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="footer-logo">
+                <img src="assets/images/logo.png" alt="Sabhyataa Foundation Logo">
+            </div>
+            <div class="footer-links">
+                <a href="#">Privacy Notice</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="copyright">
+                © Sabhyataa Foundation Trust
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+<style>
+
+    /* ==================== General Styles ==================== */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* ==================== Header Styles ==================== */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+}
+
+#covid-19-awareness {
+    background-color: #dc3545;
+    color: white;
+    text-align: center;
+    padding: 8px 0;
+    font-weight: bold;
+}
+
+#donate-now-link {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+nav .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+nav .logo img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* ==================== Form Styles ==================== */
+main {
+    padding: 20px;
+}
+
+.form-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;  /* Important: Keeps padding within the element's width */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 100px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.form-row .form-group {
+    width: 48%;  /* Adjust for spacing */
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* ==================== Footer Styles ==================== */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 30px 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5em;
+    margin: 0 12px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.copyright {
+    font-size: 0.9em;
+    margin-top: 15px;
+}
+
+/* ==================== Responsive Design ==================== */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-row .form-group {
+        width: 100%;
+    }
+}
+</style>
